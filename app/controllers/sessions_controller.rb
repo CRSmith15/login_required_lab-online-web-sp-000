@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
     end
   end
 
-  private 
+  private
 
   def require_login
     redirect_to '/login' unless session.include? :name
