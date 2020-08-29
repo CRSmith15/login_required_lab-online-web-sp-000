@@ -22,6 +22,12 @@ class SessionsController < ApplicationController
     end
   end
 
+  private 
+
+  def require_login
+    redirect_to '/login' unless session.include? :name
+  end
+
 
 
 end
