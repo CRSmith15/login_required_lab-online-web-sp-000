@@ -22,9 +22,9 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy 
+  def destroy
     if current_user
-      session.delete :name 
+      session.delete :name
       redirect_to '/login'
     end
   end
