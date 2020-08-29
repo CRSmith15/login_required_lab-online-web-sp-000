@@ -22,6 +22,13 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy 
+    if current_user
+      session.delete :name 
+      redirect_to '/login'
+    end
+  end
+
   private
 
   def require_login
